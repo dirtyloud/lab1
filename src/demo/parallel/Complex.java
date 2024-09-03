@@ -93,6 +93,16 @@ public class Complex {
         return this;
     }
 
+    @Override
+    public boolean equals(Object b) {
+        if (this == b)
+            return true;
+        if (b == null || getClass() != b.getClass())
+            return false;
+        Complex num = (Complex) b;
+        return this.re == num.re && this.im == num.im;
+    }
+
     /**
      * Square of Complex object's length, we're using square of length to 
      * eliminate the computation of square root
